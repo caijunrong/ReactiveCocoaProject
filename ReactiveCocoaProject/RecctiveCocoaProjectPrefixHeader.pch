@@ -1,0 +1,26 @@
+//
+//  RecctiveCocoaProjectPrefixHeader.pch
+//  ReactiveCocoaProject
+//
+//  Created by biyabi on 15/11/2.
+//  Copyright © 2015年 biyabi. All rights reserved.
+//
+
+#ifndef RecctiveCocoaProjectPrefixHeader_pch
+#define RecctiveCocoaProjectPrefixHeader_pch
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import <objc/runtime.h>
+
+/*固定常量define*/
+#import "CJRConstant.h"
+
+#import <ReactiveCocoa.h>
+#import <RACEXTScope.h>
+#import "AppDelegate.h"
+
+#import "MRCViewModelServices.h"
+
+#endif /* RecctiveCocoaProjectPrefixHeader_pch */
