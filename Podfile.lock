@@ -36,6 +36,7 @@ PODS:
   - Masonry (0.6.3)
   - MBProgressHUD (0.9.1)
   - MJRefresh (2.4.12)
+  - OcticonsIOS (0.0.2)
   - Ono (1.2.2)
   - pop (1.0.8)
   - ReactiveCocoa (2.5):
@@ -60,10 +61,21 @@ DEPENDENCIES:
   - Masonry
   - MBProgressHUD
   - MJRefresh
+  - OcticonsIOS (from `https://github.com/jacksonh/OcticonsIOS.git`, commit `4bd3b21`)
   - pop (~> 1.0)
   - ReactiveCocoa
   - SDWebImage
   - TSMessages
+
+EXTERNAL SOURCES:
+  OcticonsIOS:
+    :commit: 4bd3b21
+    :git: https://github.com/jacksonh/OcticonsIOS.git
+
+CHECKOUT OPTIONS:
+  OcticonsIOS:
+    :commit: 4bd3b21
+    :git: https://github.com/jacksonh/OcticonsIOS.git
 
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
@@ -75,6 +87,7 @@ SPEC CHECKSUMS:
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MJRefresh: ca8e9589895977df32d379d46e6b8a5450b3ff44
+  OcticonsIOS: e21204b48b0d83f7740008abed42f8b1573b3ffc
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a

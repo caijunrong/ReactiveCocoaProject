@@ -11,3 +11,4 @@ pod “Mantle”
 pod "LBBlurredImage"
 pod "TSMessages"
 pod "AFOnoResponseSerializer"
+pod 'OcticonsIOS', :git => 'https://github.com/jacksonh/OcticonsIOS.git', :commit => '4bd3b21'

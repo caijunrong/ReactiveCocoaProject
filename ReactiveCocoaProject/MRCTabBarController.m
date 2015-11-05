@@ -8,6 +8,10 @@
 
 #import "MRCTabBarController.h"
 
+#import "NewsViewController.h"
+#import "MRCNavigationController.h"
+#import "CategoryViewController.h"
+
 @interface MRCTabBarController ()
 
 @property (nonatomic, strong, readwrite) UITabBarController *tabBarController;
@@ -24,7 +28,49 @@
     
     [self addChildViewController:self.tabBarController];
     [self.view addSubview:self.tabBarController.view];
+    
+    [[self
+      rac_signalForSelector:@selector(tabBarController:didSelectViewController:)
+      fromProtocol:@protocol(UITabBarControllerDelegate)]
+     subscribeNext:^(RACTuple *tuple) {
+         NSLog(@"tuple:%@",tuple.second);
+         MRCSharedAppDelegate.navigationController = tuple.second;
+     }];
+    
+    self.tabBarController.delegate = self;
+
 }
+
+- (void)bindViewModel{
+    
+    //1.0
+    NewsViewController *newVC = [[NewsViewController alloc]init];
+    
+    newVC.tabBarItem.image = [UIImage imageNamed:@"首页09gray"];
+//    newVC.tabBarItem.selectedImage = [UIImage imageNamed:@"首页09red"];
+    newVC.tabBarItem.title = @"首页";
+    
+    MRCNavigationController *mrcNC = [[MRCNavigationController alloc]initWithRootViewController:newVC];
+    
+    //2.0
+    CategoryViewController *catVC = [[CategoryViewController alloc]init];
+    catVC.tabBarItem.image = [UIImage imageNamed:@"搜索09gray"];
+    catVC.tabBarItem.title = @"花边";
+    MRCNavigationController *catNC = [[MRCNavigationController alloc]initWithRootViewController:catVC];
+    self.tabBarController.viewControllers = @[mrcNC,catNC];
+    
+    //初始化一下navigationbar的值
+    MRCSharedAppDelegate.navigationController = self.tabBarController.viewControllers.firstObject;
+    
+    NSLog(@"MRCSharedAppDelegate.navigationController :%@",MRCSharedAppDelegate.navigationController );
+    
+    
+    //如果使用了通知中心，收到某个通知，调用setSelectedIndex来切换tabBarController页面的话，要顺带把MRCSharedAppDelegate.navigationController也一并修改.
+//    [self.tabBarController setSelectedIndex:1];
+}
+
+
+
 
 - (BOOL)shouldAutorotate {
     return self.tabBarController.shouldAutorotate;

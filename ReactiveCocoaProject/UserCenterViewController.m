@@ -7,6 +7,7 @@
 //
 
 #import "UserCenterViewController.h"
+#import "CategoryViewController.h"
 
 @interface UserCenterViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    CategoryViewController *userCentertt = [[CategoryViewController alloc]init];
+    [self.navigationController pushViewController:userCentertt animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {

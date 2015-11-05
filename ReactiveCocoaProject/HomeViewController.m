@@ -7,6 +7,12 @@
 //
 
 #import "HomeViewController.h"
+#import "NewsViewController.h"
+#import "CategoryViewController.h"
+#import "UserCenterViewController.h"
+#import "MRCNavigationController.h"
+#import "UIImage+MRCOcticons.h"
+#import "MRCNavigationController.h"
 
 @interface HomeViewController ()
 
@@ -14,9 +20,37 @@
 
 @implementation HomeViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    UINavigationController *newsNavigationController = ({
+        NewsViewController *newsViewController = [[NewsViewController alloc] init];
+        
+        UIImage *newsImage = [UIImage octicon_imageWithIdentifier:@"1z" size:CGSizeMake(25, 25)];
+        newsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"资讯" image:newsImage tag:1];
+        
+        [[UINavigationController alloc] initWithRootViewController:newsViewController];
+    });
+    
+    self.tabBarController.viewControllers = @[newsNavigationController];
+    
+    
+//    AppDelegate *appDel = ((AppDelegate *)[UIApplication sharedApplication].delegate);
+    
+//    [MRCSharedAppDelegate.navigationControllerStack pushNavigationController:newsNavigationController];
+    
+    [[self
+      rac_signalForSelector:@selector(tabBarController:didSelectViewController:)
+      fromProtocol:@protocol(UITabBarControllerDelegate)]
+     subscribeNext:^(RACTuple *tuple) {
+//         [MRCSharedAppDelegate.navigationControllerStack popNavigationController];
+//         [MRCSharedAppDelegate.navigationControllerStack pushNavigationController:tuple.second];
+         NSLog(@"--");
+     }];
+    self.tabBarController.delegate = self;
+
+    
 }
 
 - (void)didReceiveMemoryWarning {

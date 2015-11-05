@@ -8,6 +8,7 @@
 
 #import "MRCViewController.h"
 #import "MRCViewModel.h"
+#import "MRCLoadingTitleView.h"
 
 
 
@@ -35,6 +36,19 @@
     return viewController;
 }
 
+- (void)configTabBarHiddenWhenPush{
+    
+    [[self rac_signalForSelector:@selector(viewWillAppear:)]
+     subscribeNext:^(id x) {
+         self.hidesBottomBarWhenPushed = YES;
+     }];
+    
+    [[self rac_signalForSelector:@selector(viewWillDisappear:)]
+     subscribeNext:^(id x) {
+         self.hidesBottomBarWhenPushed = NO;
+     }];
+}
+
 - (id<MRCViewProtocol>)initWithViewModel:(id)viewModel {
     self = [super init];
     if (self) {
@@ -56,6 +70,13 @@
     
     UIView *titleView = self.navigationItem.titleView;
 
+    
+    // Loading title view
+    MRCLoadingTitleView *loadingTitleView = [[NSBundle mainBundle] loadNibNamed:@"MRCLoadingTitleView" owner:nil options:nil].firstObject;
+    loadingTitleView.frame = CGRectMake((SCREEN_WIDTH - CGRectGetWidth(loadingTitleView.frame)) / 2.0, 0, CGRectGetWidth(loadingTitleView.frame), CGRectGetHeight(loadingTitleView.frame));
+    
+    
+    
     RAC(self.navigationItem, titleView) = [RACObserve(self.viewModel, titleViewType).distinctUntilChanged map:^(NSNumber *value) {
         MRCTitleViewType titleViewType = value.unsignedIntegerValue;
         switch (titleViewType) {
@@ -65,8 +86,7 @@
                 return titleView;
 //                return (UIView *)doubleTitleView;
             case MRCTitleViewTypeLoadingTitle:
-//                return (UIView *)loadingTitleView;
-                return titleView;
+                return (UIView *)loadingTitleView;
         }
     }];
     
@@ -75,7 +95,7 @@
 //        @strongify(self)
         
         CJRLogError(error);
-    
+        //主要是要现实网络出错的view
         //如果有一种情况是登陆出错，直接切换rootviewcontroller
         
     

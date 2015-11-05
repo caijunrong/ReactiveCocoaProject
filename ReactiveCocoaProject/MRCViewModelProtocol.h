@@ -14,7 +14,6 @@ typedef NS_ENUM(NSUInteger, MRCTitleViewType) {
     MRCTitleViewTypeLoadingTitle
 };
 
-@protocol MRCViewModelServices;
 
 @protocol MRCViewModelProtocol <NSObject>
 
@@ -27,10 +26,8 @@ typedef NS_ENUM(NSUInteger, MRCTitleViewType) {
 // params   - The parameters to be passed to view model.
 //
 // Returns a new view model.
-- (instancetype)initWithServices:(id<MRCViewModelServices>)services params:(id)params;
+- (instancetype)initWithParams:(id)params;
 
-// The `services` parameter in `-initWithServices:params:` method.
-@property (nonatomic, strong, readonly) id<MRCViewModelServices> services;
 
 // The `params` parameter in `-initWithServices:params:` method.
 @property (nonatomic, strong, readonly) id params;

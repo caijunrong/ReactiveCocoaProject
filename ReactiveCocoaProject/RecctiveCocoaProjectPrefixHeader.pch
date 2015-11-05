@@ -21,6 +21,4 @@
 #import <RACEXTScope.h>
 #import "AppDelegate.h"
 
-#import "MRCViewModelServices.h"
-
 #endif /* RecctiveCocoaProjectPrefixHeader_pch */

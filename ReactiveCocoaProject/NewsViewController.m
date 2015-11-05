@@ -7,6 +7,9 @@
 //
 
 #import "NewsViewController.h"
+#import "HomeViewController.h"
+#import "NewsModel.h"
+#import "UserCenterViewController.h"
 
 @interface NewsViewController ()
 
@@ -16,8 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.view setBackgroundColor:[UIColor blueColor]];
+    [self configTabBarHiddenWhenPush];
+    UserCenterViewController *userCenter = [[UserCenterViewController alloc]init];
+    [self.navigationController pushViewController:userCenter animated:NO];
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

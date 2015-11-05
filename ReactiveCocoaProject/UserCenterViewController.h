@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MRCViewController.h"
 
-@interface UserCenterViewController : UIViewController
+@interface UserCenterViewController : MRCViewController
 
 @end

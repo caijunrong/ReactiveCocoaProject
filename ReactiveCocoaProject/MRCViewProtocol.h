@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol MRCiewModelProtocol;
+@protocol MRCViewModelProtocol;
 
 @protocol MRCViewProtocol <NSObject>
 

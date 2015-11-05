@@ -10,14 +10,12 @@
 
 @interface MRCViewModel()
 
-@property (nonatomic, strong, readwrite) id<MRCViewModelServices> services;
 @property (nonatomic, strong, readwrite) id params;
 
 @end
 
 
 @implementation MRCViewModel
-@synthesize services = _services;
 @synthesize params   = _params;
 @synthesize title    = _title;
 @synthesize subtitle = _subtitle;
@@ -42,13 +40,12 @@
     return viewModel;
 }
 
-- (instancetype)initWithServices:(id)services params:(id)params {
+- (instancetype)initWithParams:(id)params {
     self = [super init];
     if (self) {
         self.shouldFetchLocalDataOnViewModelInitialize = YES;
         self.shouldRequestRemoteDataOnViewDidLoad = YES;
         self.title    = params[@"title"];
-        self.services = services;
         self.params   = params;
     }
     return self;

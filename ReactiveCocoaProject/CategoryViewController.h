@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CategoryViewController : UIViewController
+#import "MRCViewController.h"
+@interface CategoryViewController : MRCViewController
 
 @end

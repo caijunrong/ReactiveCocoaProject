@@ -17,9 +17,9 @@
 
 @implementation MRCHomepageViewModel
 
-- (instancetype)initWithServices:(id<MRCViewModelServices>)services params:(id)params{
+- (instancetype)initWithParams:(id)params{
 
-    self = [super initWithServices:services params:params];
+    self = [super initWithParams:params];
     if (self) {
         self.type = [params[@"type"] unsignedIntegerValue];
         
