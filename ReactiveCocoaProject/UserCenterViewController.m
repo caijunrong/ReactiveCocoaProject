@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     
     CategoryViewController *userCentertt = [[CategoryViewController alloc]init];
-    [self.navigationController pushViewController:userCentertt animated:NO];
+    [self.navigationController pushViewController:userCentertt animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

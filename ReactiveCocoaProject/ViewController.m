@@ -11,6 +11,8 @@
 #import "NewsModel.h"
 #import "NewsSubListModel.h"
 #import "APPManager.h"
+#import "APPClient.h"
+#import <AFNetworking.h>
 
 @interface ViewController ()
 @property (nonatomic, strong) NewsModel *newsViewModel;
@@ -37,12 +39,20 @@
 //    
 //    }];
 
-    [self updateNewsInfoDataWithpage:1];
+//    [self updateNewsInfoDataWithpage:1];
+//    
+//    [RACObserve(self, newsViewModel) subscribeNext:^(NewsModel *x) {
+//        NSLog(@"newsViewModel--------------:%@",self.newsViewModel);
+//        NSLog(@"x----------:%@",x);
+//    }];
     
-    [RACObserve(self, newsViewModel) subscribeNext:^(NewsModel *x) {
-        NSLog(@"newsViewModel--------------:%@",self.newsViewModel);
-        NSLog(@"x----------:%@",x);
+    APPClient *appC = [[APPClient alloc]init];
+    [appC.manager GET:@"http://magazine.78dian.com/list/1-1-1-12.html" parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        NSLog(@"--");
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        NSLog(@"--");
     }];
+    
     
 //    self.newsViewModel = [[NewsModel alloc] init];
 //    self.newsViewModel = nil;
@@ -72,8 +82,13 @@
         NSLog(@"nsModel:%@",nsModel);
         self.newsViewModel = nsModel;
     }];
+                         
+    [signal subscribeError:^(NSError *error) {
+        NSLog(@"error:%@",error);
+    }];
     [signal subscribeNext:^(NewsModel *nsModel) {
-//        NSLog(@"nsModel:%@",nsModel);
+        self.newsViewModel = nsModel;
+        NSLog(@"nsModel:%@",nsModel);
     }];
     
     return signal;

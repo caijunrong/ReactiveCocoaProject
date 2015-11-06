@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MRCViewController.h"
-@interface NewsViewController :MRCViewController
+#import "MRCTableViewController.h"
+
+
+@interface NewsViewController :MRCTableViewController
 
 @end

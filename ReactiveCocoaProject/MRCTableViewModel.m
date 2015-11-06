@@ -20,17 +20,7 @@
     [super initialize];
     
     self.page = 1;
-    self.perPage = 30;
-    
-    @weakify(self)
-    self.requestRemoteDataCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSNumber *page) {
-        @strongify(self)
-        return [[self requestRemoteDataSignalWithPage:page.unsignedIntegerValue] takeUntil:self.rac_willDeallocSignal];
-    }];
-    
-    [[self.requestRemoteDataCommand.errors
-      filter:[self requestRemoteDataErrorsFilter]]
-     subscribe:self.errors];
+
 }
 
 - (BOOL (^)(NSError *error))requestRemoteDataErrorsFilter {

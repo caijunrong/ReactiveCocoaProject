@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "HomeViewController.h"
 #import "NormalViewModel.h"
 #import "MRCNavigationController.h"
 #import "NewsViewController.h"
@@ -23,10 +22,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    MRCTabBarController *tabBarHomeController =[[MRCTabBarController alloc]init];
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = tabBarHomeController;
-    [self.window makeKeyAndVisible];
+//    MRCTabBarController *tabBarHomeController =[[MRCTabBarController alloc]init];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window.rootViewController = tabBarHomeController;
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }

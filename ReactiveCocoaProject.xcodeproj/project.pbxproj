@@ -41,6 +41,12 @@
 		608396451BEB832400219F6E /* 我的09gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 6083963F1BEB832400219F6E /* 我的09gray.png */; };
 		608396461BEB832400219F6E /* 我的09gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 608396401BEB832400219F6E /* 我的09gray@2x.png */; };
 		608396471BEB832400219F6E /* 我的09gray@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 608396411BEB832400219F6E /* 我的09gray@3x.png */; };
+		6083964B1BEC817000219F6E /* NewsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6083964A1BEC817000219F6E /* NewsViewModel.m */; };
+		6083964E1BEC894A00219F6E /* NewsItemVIewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6083964D1BEC894A00219F6E /* NewsItemVIewModel.m */; };
+		608396521BEC8CDC00219F6E /* MyNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608396501BEC8CDC00219F6E /* MyNewsViewController.m */; };
+		608396531BEC8CDC00219F6E /* MyNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608396511BEC8CDC00219F6E /* MyNewsViewController.xib */; };
+		608396571BEC8DA600219F6E /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 608396551BEC8DA600219F6E /* NewsTableViewCell.m */; };
+		608396581BEC8DA600219F6E /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608396561BEC8DA600219F6E /* NewsTableViewCell.xib */; };
 		60A5D1111BE74B180051A1EB /* MRCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A5D1101BE74B180051A1EB /* MRCNavigationController.m */; };
 		60A5D1141BE74BBF0051A1EB /* MRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A5D1131BE74BBF0051A1EB /* MRCViewController.m */; };
 		60A5D1181BE74C9C0051A1EB /* MRCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A5D1171BE74C9C0051A1EB /* MRCViewModel.m */; };
@@ -57,7 +63,6 @@
 		60A5D1791BEAF4150051A1EB /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A5D1781BEAF4150051A1EB /* NewsViewController.m */; };
 		60A5D17C1BEAF4300051A1EB /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A5D17B1BEAF4300051A1EB /* CategoryViewController.m */; };
 		60A5D17F1BEAF4430051A1EB /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A5D17E1BEAF4430051A1EB /* UserCenterViewController.m */; };
-		60A5D1821BEAF4C50051A1EB /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A5D1811BEAF4C50051A1EB /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +130,16 @@
 		6083963F1BEB832400219F6E /* 我的09gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的09gray.png"; sourceTree = "<group>"; };
 		608396401BEB832400219F6E /* 我的09gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的09gray@2x.png"; sourceTree = "<group>"; };
 		608396411BEB832400219F6E /* 我的09gray@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的09gray@3x.png"; sourceTree = "<group>"; };
+		608396491BEC817000219F6E /* NewsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewModel.h; sourceTree = "<group>"; };
+		6083964A1BEC817000219F6E /* NewsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewModel.m; sourceTree = "<group>"; };
+		6083964C1BEC894A00219F6E /* NewsItemVIewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItemVIewModel.h; sourceTree = "<group>"; };
+		6083964D1BEC894A00219F6E /* NewsItemVIewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItemVIewModel.m; sourceTree = "<group>"; };
+		6083964F1BEC8CDC00219F6E /* MyNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNewsViewController.h; sourceTree = "<group>"; };
+		608396501BEC8CDC00219F6E /* MyNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNewsViewController.m; sourceTree = "<group>"; };
+		608396511BEC8CDC00219F6E /* MyNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyNewsViewController.xib; sourceTree = "<group>"; };
+		608396541BEC8DA600219F6E /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		608396551BEC8DA600219F6E /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		608396561BEC8DA600219F6E /* NewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		60A5D0F31BE6FFA30051A1EB /* RecctiveCocoaProjectPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecctiveCocoaProjectPrefixHeader.pch; sourceTree = "<group>"; };
 		60A5D0F51BE706B90051A1EB /* CJRConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJRConstant.h; sourceTree = "<group>"; };
 		60A5D1071BE739C40051A1EB /* MRCViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCViewProtocol.h; sourceTree = "<group>"; };
@@ -162,8 +177,6 @@
 		60A5D17B1BEAF4300051A1EB /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		60A5D17D1BEAF4430051A1EB /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
 		60A5D17E1BEAF4430051A1EB /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
-		60A5D1801BEAF4C50051A1EB /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		60A5D1811BEAF4C50051A1EB /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		8A059895FCC4B3A634353EA8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A67137C98DD9BBD8E876C267 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -244,6 +257,8 @@
 				60A5D0F41BE706860051A1EB /* Util */,
 				604885321BDF273C008C8E7E /* AppDelegate.h */,
 				604885331BDF273C008C8E7E /* AppDelegate.m */,
+				60A5D1191BE751360051A1EB /* MRCTabBarController.h */,
+				60A5D11A1BE751360051A1EB /* MRCTabBarController.m */,
 				604885351BDF273C008C8E7E /* ViewController.h */,
 				604885361BDF273C008C8E7E /* ViewController.m */,
 				604885381BDF273C008C8E7E /* Main.storyboard */,
@@ -323,15 +338,11 @@
 			children = (
 				6083962F1BEB2AFF00219F6E /* MRCTableViewCellStyleValue1.h */,
 				608396301BEB2AFF00219F6E /* MRCTableViewCellStyleValue1.m */,
+				608396541BEC8DA600219F6E /* NewsTableViewCell.h */,
+				608396551BEC8DA600219F6E /* NewsTableViewCell.m */,
+				608396561BEC8DA600219F6E /* NewsTableViewCell.xib */,
 			);
 			name = TableViewCell;
-			sourceTree = "<group>";
-		};
-		608396481BEB83B100219F6E /* old */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = old;
 			sourceTree = "<group>";
 		};
 		60A5D0F41BE706860051A1EB /* Util */ = {
@@ -355,7 +366,6 @@
 		60A5D0F71BE70D1D0051A1EB /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
-				608396481BEB83B100219F6E /* old */,
 				60A5D10C1BE73D3D0051A1EB /* MRCViewModelProtocol.h */,
 				60A5D1161BE74C9C0051A1EB /* MRCViewModel.h */,
 				60A5D1171BE74C9C0051A1EB /* MRCViewModel.m */,
@@ -369,6 +379,10 @@
 				60A5D1311BE77DE50051A1EB /* HomeViewModel.m */,
 				608396331BEB2D8F00219F6E /* NormalViewModel.h */,
 				608396341BEB2D8F00219F6E /* NormalViewModel.m */,
+				608396491BEC817000219F6E /* NewsViewModel.h */,
+				6083964A1BEC817000219F6E /* NewsViewModel.m */,
+				6083964C1BEC894A00219F6E /* NewsItemVIewModel.h */,
+				6083964D1BEC894A00219F6E /* NewsItemVIewModel.m */,
 			);
 			name = BaseClass;
 			sourceTree = "<group>";
@@ -400,10 +414,8 @@
 				60A5D1101BE74B180051A1EB /* MRCNavigationController.m */,
 				60A5D1121BE74BBF0051A1EB /* MRCViewController.h */,
 				60A5D1131BE74BBF0051A1EB /* MRCViewController.m */,
-				60A5D1191BE751360051A1EB /* MRCTabBarController.h */,
-				60A5D11A1BE751360051A1EB /* MRCTabBarController.m */,
-				60A5D1801BEAF4C50051A1EB /* HomeViewController.h */,
-				60A5D1811BEAF4C50051A1EB /* HomeViewController.m */,
+				6083962B1BEB2A4F00219F6E /* MRCTableViewController.h */,
+				6083962C1BEB2A4F00219F6E /* MRCTableViewController.m */,
 			);
 			name = BaseClass;
 			sourceTree = "<group>";
@@ -450,8 +462,9 @@
 				60A5D17B1BEAF4300051A1EB /* CategoryViewController.m */,
 				60A5D17D1BEAF4430051A1EB /* UserCenterViewController.h */,
 				60A5D17E1BEAF4430051A1EB /* UserCenterViewController.m */,
-				6083962B1BEB2A4F00219F6E /* MRCTableViewController.h */,
-				6083962C1BEB2A4F00219F6E /* MRCTableViewController.m */,
+				6083964F1BEC8CDC00219F6E /* MyNewsViewController.h */,
+				608396501BEC8CDC00219F6E /* MyNewsViewController.m */,
+				608396511BEC8CDC00219F6E /* MyNewsViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -570,6 +583,7 @@
 				608396421BEB832400219F6E /* 搜索09gray.png in Resources */,
 				6083961E1BEB0F1C00219F6E /* 1z.png in Resources */,
 				6048853F1BDF273C008C8E7E /* LaunchScreen.storyboard in Resources */,
+				608396581BEC8DA600219F6E /* NewsTableViewCell.xib in Resources */,
 				608396201BEB0F1C00219F6E /* 2s.png in Resources */,
 				608396431BEB832400219F6E /* 搜索09gray@2x.png in Resources */,
 				6083963B1BEB824400219F6E /* 首页09gray@3x.png in Resources */,
@@ -580,6 +594,7 @@
 				608396441BEB832400219F6E /* 搜索09gray@3x.png in Resources */,
 				608396461BEB832400219F6E /* 我的09gray@2x.png in Resources */,
 				6048853A1BDF273C008C8E7E /* Main.storyboard in Resources */,
+				608396531BEC8CDC00219F6E /* MyNewsViewController.xib in Resources */,
 				608396241BEB0F1C00219F6E /* 4h.png in Resources */,
 				608396231BEB0F1C00219F6E /* 3sh.png in Resources */,
 				608396471BEB832400219F6E /* 我的09gray@3x.png in Resources */,
@@ -645,12 +660,13 @@
 				60A5D17F1BEAF4430051A1EB /* UserCenterViewController.m in Sources */,
 				604885371BDF273C008C8E7E /* ViewController.m in Sources */,
 				60A5D11E1BE756340051A1EB /* MRCTabBarViewModel.m in Sources */,
+				6083964E1BEC894A00219F6E /* NewsItemVIewModel.m in Sources */,
 				608396111BEB0AEC00219F6E /* MRCLoadingTitleView.m in Sources */,
+				608396571BEC8DA600219F6E /* NewsTableViewCell.m in Sources */,
 				60A5D17C1BEAF4300051A1EB /* CategoryViewController.m in Sources */,
 				60A5D15D1BE8E1F90051A1EB /* NewsModel.m in Sources */,
 				60A5D1111BE74B180051A1EB /* MRCNavigationController.m in Sources */,
 				608396351BEB2D8F00219F6E /* NormalViewModel.m in Sources */,
-				60A5D1821BEAF4C50051A1EB /* HomeViewController.m in Sources */,
 				60A5D1791BEAF4150051A1EB /* NewsViewController.m in Sources */,
 				60A5D1591BE896B40051A1EB /* APPClient.m in Sources */,
 				6083962A1BEB0F9400219F6E /* UIImage+MRCOcticons.m in Sources */,
@@ -665,7 +681,9 @@
 				6083962D1BEB2A4F00219F6E /* MRCTableViewController.m in Sources */,
 				60A5D11B1BE751360051A1EB /* MRCTabBarController.m in Sources */,
 				60A5D1141BE74BBF0051A1EB /* MRCViewController.m in Sources */,
+				608396521BEC8CDC00219F6E /* MyNewsViewController.m in Sources */,
 				60A5D1241BE757CF0051A1EB /* MRCTableViewModel.m in Sources */,
+				6083964B1BEC817000219F6E /* NewsViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

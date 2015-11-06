@@ -77,7 +77,7 @@
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
          @strongify(self)
         [self GetRequest:url parameter:patameter complete:^(id responseObject, NSError *error) {
-            
+            NSLog(@"json:%@",responseObject);
             if (!error) {
                 
                 NSError *jsonError = nil;
@@ -93,6 +93,7 @@
                 
             }else{
                 // 2 在任一情况下如果有一个错误，通知订阅者。
+                
                 [subscriber sendError:error];
             }
             
@@ -112,7 +113,7 @@
 
 - (void)PostRequest:(NSString *)url parameter:(NSDictionary *)patameter complete:(CompleteResult)completeBlock{
     
-    [self.manager GET:[NSString stringWithFormat:@"%@",url] parameters:patameter success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    [self.manager POST:[NSString stringWithFormat:@"%@",url] parameters:patameter success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
 
         if (completeBlock) {
             completeBlock(responseObject,nil);
@@ -130,15 +131,18 @@
 
 - (void)GetRequest:(NSString *)url parameter:(NSDictionary *)patameter complete:(CompleteResult)completeBlock{
     
-    [self.manager POST:[NSString stringWithFormat:@"%@",url] parameters:patameter success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        
+    [self.manager GET:[NSString stringWithFormat:@"%@",url] parameters:patameter success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        NSLog(@"url:%@",url);
+        NSLog(@"responseObject:%@",responseObject);
         if (completeBlock) {
             completeBlock(responseObject,nil);
         }
         
         
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        NSLog(@"url:%@",url);
         
+        NSLog(@"patameter:%@",patameter);
         if (completeBlock) {
             completeBlock(nil,error);
         }

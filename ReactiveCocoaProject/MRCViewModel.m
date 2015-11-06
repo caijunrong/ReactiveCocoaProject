@@ -31,7 +31,7 @@
     
     @weakify(viewModel)
     [[viewModel
-      rac_signalForSelector:@selector(initWithServices:params:)]
+      rac_signalForSelector:@selector(initWithParams:)]
     	subscribeNext:^(id x) {
             @strongify(viewModel)
             [viewModel initialize];

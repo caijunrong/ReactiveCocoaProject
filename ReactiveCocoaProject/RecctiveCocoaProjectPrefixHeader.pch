@@ -21,4 +21,7 @@
 #import <RACEXTScope.h>
 #import "AppDelegate.h"
 
+#import <MJRefresh.h>
+#import <MBProgressHUD.h>
+
 #endif /* RecctiveCocoaProjectPrefixHeader_pch */

@@ -11,6 +11,8 @@
 #import "NewsViewController.h"
 #import "MRCNavigationController.h"
 #import "CategoryViewController.h"
+#import "MyNewsViewController.h"
+#import "NewsViewModel.h"
 
 @interface MRCTabBarController ()
 
@@ -44,7 +46,9 @@
 - (void)bindViewModel{
     
     //1.0
-    NewsViewController *newVC = [[NewsViewController alloc]init];
+    NewsViewModel *nsViewModel = [[NewsViewModel alloc]initWithParams:nil];
+    
+    NewsViewController *newVC = [[NewsViewController alloc]initWithViewModel:nsViewModel];
     
     newVC.tabBarItem.image = [UIImage imageNamed:@"首页09gray"];
 //    newVC.tabBarItem.selectedImage = [UIImage imageNamed:@"首页09red"];
